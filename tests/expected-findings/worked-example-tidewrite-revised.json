@@ -1,0 +1,32 @@
+{
+  "scenario": "-",
+  "description": "worked example after fixes: no high findings; honest residual (personal content in browser storage) remains",
+  "script": "audit_frontend.py",
+  "args": [
+    "{fixtures}/tidewrite-revised",
+    "--json"
+  ],
+  "expect_exit": 0,
+  "must_include": [
+    "EC-P03S",
+    "EC-P01"
+  ],
+  "must_not_include": [
+    "EC-A01",
+    "EC-A01J",
+    "EC-A02",
+    "EC-A04",
+    "EC-A05",
+    "EC-A06",
+    "EC-A08",
+    "EC-A09",
+    "EC-C01",
+    "EC-C02",
+    "EC-C03",
+    "EC-C04",
+    "EC-P05",
+    "EC-D01",
+    "EC-V05",
+    "EC-X01"
+  ]
+}

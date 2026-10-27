@@ -1,0 +1,19 @@
+{
+  "scenario": "-",
+  "description": "echocraft/ passes its own validator at medium",
+  "script": "validate_skill.py",
+  "args": [
+    "{skill}",
+    "--json",
+    "--fail-on",
+    "medium"
+  ],
+  "expect_exit": 0,
+  "asserts": [
+    {
+      "path": "findings",
+      "op": "eq",
+      "value": []
+    }
+  ]
+}

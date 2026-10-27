@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Tidewrite</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas class="tide-canvas" aria-hidden="true"></canvas>
+  <main>
+    <h1>Tidewrite</h1>
+    <p class="promise">Everything you write stays on your device.</p>
+    <img src="https://images.example-cdn.test/shell.png">
+    <p id="nudge">You haven't written in 4 days. Your little crab misses you.</p>
+    <p id="insight">We noticed you seem low this week. Writing is clinically proven to reduce anxiety.</p>
+    <textarea id="entry" placeholder="What's on your mind?"></textarea>
+    <button id="save">Save</button>
+    <button id="wipe">Delete everything</button>
+    <div id="toast" class="toast"></div>
+  </main>
+  <script src="https://cdn.example-confetti.test/confetti@2.1.0/confetti.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "scenario": 5,
+  "description": "CSS and JS both honour preference -> no motion findings",
+  "script": "audit_frontend.py",
+  "args": [
+    "{fixtures}/s05c-reduced-motion-ok",
+    "--json",
+    "--fail-on",
+    "low"
+  ],
+  "expect_exit": 0,
+  "must_not_include": [
+    "EC-A01",
+    "EC-A01J"
+  ]
+}

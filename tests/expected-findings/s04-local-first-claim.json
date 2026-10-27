@@ -1,0 +1,19 @@
+{
+  "scenario": 4,
+  "description": "'never leaves your device' vs remote insert -> high",
+  "script": "audit_frontend.py",
+  "args": [
+    "{fixtures}/s04-local-first-claim",
+    "--json"
+  ],
+  "expect_exit": 1,
+  "must_include": [
+    "EC-P05",
+    "EC-P01",
+    "EC-P03S",
+    "EC-D01"
+  ],
+  "must_not_include": [
+    "EC-P05U"
+  ]
+}

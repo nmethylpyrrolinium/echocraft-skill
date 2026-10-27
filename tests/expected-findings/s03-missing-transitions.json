@@ -1,0 +1,21 @@
+{
+  "scenario": 3,
+  "description": "flawed table: dead end, trap, nondeterminism, unreachable, undefined, etc.",
+  "script": "state_table_check.py",
+  "args": [
+    "{fixtures}/s03-missing-transitions/state-table.md",
+    "--json"
+  ],
+  "expect_exit": 1,
+  "must_include": [
+    "ST-DEAD-END",
+    "ST-TRAP",
+    "ST-NONDETERMINISTIC",
+    "ST-UNREACHABLE",
+    "ST-UNDEFINED-TARGET",
+    "ST-DESTRUCTIVE",
+    "ST-ASYNC-OUTCOMES",
+    "ST-ORPHAN-ACTION",
+    "ST-MISSING-DATA"
+  ]
+}

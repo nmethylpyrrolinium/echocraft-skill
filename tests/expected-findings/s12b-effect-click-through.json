@@ -1,0 +1,16 @@
+{
+  "scenario": 12,
+  "description": "same layer with pointer-events:none -> no EC-V05",
+  "script": "audit_frontend.py",
+  "args": [
+    "{fixtures}/s12b-effect-click-through",
+    "--json",
+    "--fail-on",
+    "medium"
+  ],
+  "expect_exit": 0,
+  "must_not_include": [
+    "EC-V05",
+    "EC-V06"
+  ]
+}

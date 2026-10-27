@@ -1,0 +1,13 @@
+{
+  "scenario": 5,
+  "description": "animation with no reduced-motion handling -> high",
+  "script": "audit_frontend.py",
+  "args": [
+    "{fixtures}/s05-no-reduced-motion",
+    "--json"
+  ],
+  "expect_exit": 1,
+  "must_include": [
+    "EC-A01"
+  ]
+}

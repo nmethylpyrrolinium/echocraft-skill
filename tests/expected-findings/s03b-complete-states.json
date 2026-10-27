@@ -1,0 +1,23 @@
+{
+  "scenario": 3,
+  "description": "coherent table -> zero findings (false-positive control)",
+  "script": "state_table_check.py",
+  "args": [
+    "{fixtures}/s03b-complete-states/state-table.md",
+    "--entry",
+    "first visit,returning visit",
+    "--require",
+    "loading,empty,error,offline,confirm",
+    "--json",
+    "--fail-on",
+    "low"
+  ],
+  "expect_exit": 0,
+  "asserts": [
+    {
+      "path": "findings",
+      "op": "eq",
+      "value": []
+    }
+  ]
+}

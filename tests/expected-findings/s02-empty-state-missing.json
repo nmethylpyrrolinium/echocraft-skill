@@ -1,0 +1,15 @@
+{
+  "scenario": 2,
+  "description": "no zero-content state -> required state flagged",
+  "script": "state_table_check.py",
+  "args": [
+    "{fixtures}/s02-no-saved-content/state-table.md",
+    "--require",
+    "empty",
+    "--json"
+  ],
+  "expect_exit": 1,
+  "must_include": [
+    "ST-REQUIRED-MISSING"
+  ]
+}

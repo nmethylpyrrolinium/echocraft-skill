@@ -1,0 +1,18 @@
+{
+  "scenario": 11,
+  "description": "remote client + local-only delete -> flagged",
+  "script": "audit_frontend.py",
+  "args": [
+    "{fixtures}/s11a-deletion-local-only",
+    "--json",
+    "--fail-on",
+    "medium"
+  ],
+  "expect_exit": 1,
+  "must_include": [
+    "EC-D01"
+  ],
+  "must_not_include": [
+    "EC-D02"
+  ]
+}

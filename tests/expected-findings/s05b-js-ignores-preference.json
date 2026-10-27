@@ -1,0 +1,18 @@
+{
+  "scenario": 5,
+  "description": "CSS honours preference, canvas loop does not -> medium",
+  "script": "audit_frontend.py",
+  "args": [
+    "{fixtures}/s05b-css-only-reduced-motion",
+    "--json",
+    "--fail-on",
+    "medium"
+  ],
+  "expect_exit": 1,
+  "must_include": [
+    "EC-A01J"
+  ],
+  "must_not_include": [
+    "EC-A01"
+  ]
+}

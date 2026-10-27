@@ -1,0 +1,35 @@
+{
+  "scenario": "-",
+  "description": "worked example: the audit reports the planted defects",
+  "script": "audit_frontend.py",
+  "args": [
+    "{fixtures}/tidewrite",
+    "--json"
+  ],
+  "expect_exit": 1,
+  "must_include": [
+    "EC-A01",
+    "EC-C01",
+    "EC-C02",
+    "EC-C03",
+    "EC-C04",
+    "EC-P05",
+    "EC-D01",
+    "EC-V05",
+    "EC-X01",
+    "EC-A02",
+    "EC-A04",
+    "EC-A05",
+    "EC-A06",
+    "EC-A08",
+    "EC-A09",
+    "EC-P03S"
+  ],
+  "asserts": [
+    {
+      "path": "findings",
+      "op": "len_gte",
+      "value": 20
+    }
+  ]
+}

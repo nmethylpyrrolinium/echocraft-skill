@@ -1,0 +1,18 @@
+:root {
+  --ink: #f4efe6;
+  --paper: #0e0c0a;
+  --gold: #c9a45c;
+  --muted: #5a5248;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 32px;
+  --dur-fast: 150ms;
+  --dur-slow: 700ms;
+  --ease-quiet: cubic-bezier(.2, .7, .2, 1);
+}
+body { background: var(--paper); color: var(--ink); font-family: var(--font-body); }
+h1 { font-family: var(--font-display); color: var(--gold); }
+.hint { color: var(--muted); border-color: #333; }
