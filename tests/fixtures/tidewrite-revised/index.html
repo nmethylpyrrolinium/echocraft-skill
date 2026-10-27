@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tidewrite</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas class="tide-canvas" aria-hidden="true"></canvas>
+  <main>
+    <h1>Tidewrite</h1>
+    <p class="note">Entries are saved in this browser. Sync is off unless you turn it on in Settings.</p>
+    <p id="welcome">Welcome back.</p>
+    <p id="count">Entries this week: <span id="n">0</span> <a href="#how">How is this counted?</a></p>
+    <label for="entry">Write something</label>
+    <textarea id="entry"></textarea>
+    <button id="save">Save entry</button>
+    <button id="wipe">Remove entries from this device</button>
+    <label><input id="motion" type="checkbox"> Calm the background motion</label>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <p id="how" class="note">Counts entries you saved in the last 7 days. Nothing is inferred from their text.</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

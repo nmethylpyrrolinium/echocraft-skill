@@ -1,0 +1,16 @@
+{
+  "scenario": 8,
+  "description": "asserted emotion, clinical claim, guilt copy -> flagged",
+  "script": "audit_frontend.py",
+  "args": [
+    "{fixtures}/s08-unsupported-insight",
+    "--json"
+  ],
+  "expect_exit": 1,
+  "must_include": [
+    "EC-C01",
+    "EC-C02",
+    "EC-C03",
+    "EC-C04"
+  ]
+}

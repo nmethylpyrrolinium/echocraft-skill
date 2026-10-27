@@ -1,0 +1,6 @@
+:root { --ink: #1a1a1a; --paper: #ffffff; --accent: #0b5fff; }
+body { font: 1rem/1.5 system-ui, sans-serif; color: var(--ink); background: var(--paper); margin: 0 auto; max-width: 64ch; padding: 1rem; }
+a, button { color: var(--accent); }
+button { transition: background-color 150ms ease; padding: .75rem 1.25rem; min-height: 44px; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }

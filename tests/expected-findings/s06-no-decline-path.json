@@ -1,0 +1,15 @@
+{
+  "scenario": 6,
+  "description": "personalization offered with no decline path -> required state missing",
+  "script": "state_table_check.py",
+  "args": [
+    "{fixtures}/s06-declined-personalization/state-table.md",
+    "--require",
+    "declined",
+    "--json"
+  ],
+  "expect_exit": 1,
+  "must_include": [
+    "ST-REQUIRED-MISSING"
+  ]
+}

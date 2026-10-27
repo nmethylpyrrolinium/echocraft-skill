@@ -1,0 +1,23 @@
+{
+  "scenario": 9,
+  "description": "three unpinned-integrity CDN scripts for one fade -> flagged",
+  "script": "audit_frontend.py",
+  "args": [
+    "{fixtures}/s09-extra-dependencies",
+    "--json",
+    "--fail-on",
+    "medium"
+  ],
+  "expect_exit": 1,
+  "must_include": [
+    "EC-X01",
+    "EC-P04"
+  ],
+  "asserts": [
+    {
+      "path": "findings",
+      "op": "len_gte",
+      "value": 6
+    }
+  ]
+}

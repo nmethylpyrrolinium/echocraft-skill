@@ -1,0 +1,36 @@
+{
+  "scenario": 7,
+  "description": "existing design tokens inventoried; low-contrast pair flagged, good pair passes",
+  "script": "inspect_tokens.py",
+  "args": [
+    "{fixtures}/s07-existing-design-system",
+    "--pairs=--ink:--paper,--muted:--paper",
+    "--json"
+  ],
+  "expect_exit": 1,
+  "must_include": [
+    "TK-CONTRAST"
+  ],
+  "asserts": [
+    {
+      "path": "summary.tokens",
+      "op": "gte",
+      "value": 12
+    },
+    {
+      "path": "pairs.0.pass",
+      "op": "eq",
+      "value": true
+    },
+    {
+      "path": "pairs.1.pass",
+      "op": "eq",
+      "value": false
+    },
+    {
+      "path": "summary.hardcoded_hex_outside_tokens",
+      "op": "gte",
+      "value": 1
+    }
+  ]
+}

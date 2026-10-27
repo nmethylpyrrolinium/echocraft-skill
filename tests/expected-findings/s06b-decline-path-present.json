@@ -1,0 +1,21 @@
+{
+  "scenario": 6,
+  "description": "decline is a first-class path -> clean",
+  "script": "state_table_check.py",
+  "args": [
+    "{fixtures}/s06b-decline-path-present/state-table.md",
+    "--require",
+    "declined",
+    "--json",
+    "--fail-on",
+    "low"
+  ],
+  "expect_exit": 0,
+  "asserts": [
+    {
+      "path": "findings",
+      "op": "eq",
+      "value": []
+    }
+  ]
+}

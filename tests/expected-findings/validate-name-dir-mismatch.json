@@ -1,0 +1,14 @@
+{
+  "scenario": "-",
+  "description": "name != dir, description > 1024 detected",
+  "script": "validate_skill.py",
+  "args": [
+    "{fixtures}/validate/name-dir-mismatch/dir-name",
+    "--json"
+  ],
+  "expect_exit": 1,
+  "must_include": [
+    "SK-NAME-DIR",
+    "SK-DESC-LENGTH"
+  ]
+}

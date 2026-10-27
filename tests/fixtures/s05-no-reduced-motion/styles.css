@@ -1,0 +1,3 @@
+@keyframes drift { from { transform: translateY(0); } to { transform: translateY(-40px); } }
+.orb { animation: drift 4s ease-in-out infinite alternate; }
+.card { transition: transform 300ms ease; }

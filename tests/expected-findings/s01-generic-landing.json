@@ -1,0 +1,33 @@
+{
+  "scenario": 1,
+  "description": "generic landing page: no emotional findings, no high/medium noise",
+  "script": "audit_frontend.py",
+  "args": [
+    "{fixtures}/s01-generic-landing",
+    "--json",
+    "--fail-on",
+    "low"
+  ],
+  "expect_exit": 0,
+  "must_not_include": [
+    "EC-A01",
+    "EC-A01J",
+    "EC-A02",
+    "EC-A05",
+    "EC-A06",
+    "EC-C01",
+    "EC-C02",
+    "EC-C03",
+    "EC-C04",
+    "EC-P05",
+    "EC-P02",
+    "EC-V05"
+  ],
+  "asserts": [
+    {
+      "path": "files_scanned",
+      "op": "eq",
+      "value": 2
+    }
+  ]
+}

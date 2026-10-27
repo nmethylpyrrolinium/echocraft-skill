@@ -1,0 +1,16 @@
+{
+  "scenario": "-",
+  "description": "bad name/key/link/orphan detected",
+  "script": "validate_skill.py",
+  "args": [
+    "{fixtures}/validate/bad-name/Bad_Name",
+    "--json"
+  ],
+  "expect_exit": 1,
+  "must_include": [
+    "SK-NAME-FORMAT",
+    "SK-UNKNOWN-KEY",
+    "SK-LINK-BROKEN",
+    "SK-ORPHAN"
+  ]
+}

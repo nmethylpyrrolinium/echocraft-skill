@@ -1,0 +1,21 @@
+{
+  "scenario": 7,
+  "description": "regression: several custom properties on one line are all inventoried",
+  "script": "inspect_tokens.py",
+  "args": [
+    "{fixtures}/tidewrite",
+    "--pairs=--ink:--paper,--muted:--paper",
+    "--json"
+  ],
+  "expect_exit": 1,
+  "must_include": [
+    "TK-CONTRAST"
+  ],
+  "asserts": [
+    {
+      "path": "summary.tokens",
+      "op": "eq",
+      "value": 4
+    }
+  ]
+}

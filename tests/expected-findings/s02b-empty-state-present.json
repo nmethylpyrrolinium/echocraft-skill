@@ -1,0 +1,18 @@
+{
+  "scenario": 2,
+  "description": "zero-content state present -> clean",
+  "script": "state_table_check.py",
+  "args": [
+    "{fixtures}/s02-no-saved-content/state-table-with-empty.md",
+    "--require",
+    "empty,loading,error",
+    "--json"
+  ],
+  "expect_exit": 0,
+  "must_not_include": [
+    "ST-REQUIRED-MISSING",
+    "ST-DEAD-END",
+    "ST-TRAP",
+    "ST-UNREACHABLE"
+  ]
+}

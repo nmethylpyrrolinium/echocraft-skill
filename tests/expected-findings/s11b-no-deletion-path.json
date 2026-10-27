@@ -1,0 +1,18 @@
+{
+  "scenario": 11,
+  "description": "remote client + no deletion at all -> flagged",
+  "script": "audit_frontend.py",
+  "args": [
+    "{fixtures}/s11b-no-deletion-path",
+    "--json",
+    "--fail-on",
+    "medium"
+  ],
+  "expect_exit": 1,
+  "must_include": [
+    "EC-D02"
+  ],
+  "must_not_include": [
+    "EC-D01"
+  ]
+}

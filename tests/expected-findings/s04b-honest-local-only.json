@@ -1,0 +1,20 @@
+{
+  "scenario": 4,
+  "description": "local-only app: claim not contradicted, no high finding",
+  "script": "audit_frontend.py",
+  "args": [
+    "{fixtures}/s04b-honest-local-only",
+    "--json"
+  ],
+  "expect_exit": 0,
+  "must_include": [
+    "EC-P05U",
+    "EC-P03S"
+  ],
+  "must_not_include": [
+    "EC-P05",
+    "EC-P01",
+    "EC-D01",
+    "EC-D02"
+  ]
+}
